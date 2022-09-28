@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+	@apply font-poppins text-slate-600 bg-gray-100 dark:bg-slate-900 dark:text-slate-400;
+}
+
+#root {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+/* header {
+	background: linear-gradient(to bottom, rgba(15, 23, 42, 1) 1%, rgba(15, 23, 42, 0) 100%);
+}
+footer {
+	background: linear-gradient(to bottom, rgba(15, 23, 42, 0) 0%, rgba(15, 23, 42, 0.01) 1%, rgba(15, 23, 42, 1) 100%);
+}
+
+.pepin::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: linear-gradient(to bottom, rgba(8, 15, 40, 0) 0%, rgba(15, 23, 42, 1) 100%);
+} */
+
+/* ----> Class <---- */
+.transition-all-500 {
+	@apply transition-all duration-500;
+}
+
+nav > ul > li > a.active {
+	@apply text-sky-500;
+}
+
+.clamp-1 {
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+}
+
+.clamp-4 {
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 4;
+}
+
+.clamp-7 {
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 7;
+}
+
+/* ----> Animations <---- */
+
+.effect-zoom:hover {
+	animation: zoom 300ms ease-in;
+}
+
+.animation-loader {
+	animation: loader 1.3s infinite ease-in-out;
+}
+
+@keyframes zoom {
+	0%,
+	100% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.07);
+	}
+}
+
+@keyframes loader {
+	0%,
+	100% {
+		transform: translateX(-20%);
+	}
+	50% {
+		transform: translateX(120%);
+	}
+}
+
+/* ----> Scrollbar <---- */
+body::-webkit-scrollbar,
+*[class*='overflow-y-auto']::-webkit-scrollbar {
+	@apply h-3 w-3;
+}
+
+body::-webkit-scrollbar-thumb {
+	@apply bg-sky-500 dark:bg-slate-800;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+	@apply bg-sky-400 dark:bg-slate-700;
+}
+
+body::-webkit-scrollbar-track,
+*[class*='overflow-y-auto']::-webkit-scrollbar-track {
+	@apply bg-transparent;
+}
+
+*[class*='overflow-y-auto']::-webkit-scrollbar-thumb {
+	@apply bg-sky-500 dark:bg-slate-700;
+}
+
+*[class*='overflow-y-auto']::-webkit-scrollbar-thumb:hover {
+	@apply bg-sky-400 dark:bg-slate-600;
+}
+
+/* ----> loader <---- */
+.load {
+	@apply w-full h-screen flex justify-center items-center;
+}
+
+.load div {
+	@apply w-6 h-6 bg-sky-500 ml-1 rounded-[50%];
+	margin-top: calc(50px - 12.5px);
+	animation-name: loading;
+	animation-duration: 1.2s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+.load-two {
+	animation-delay: 0.4s;
+}
+
+.load-three {
+	animation-delay: 0.8s;
+}
+
+@keyframes loading {
+	to {
+		opacity: 0.3;
+		transform: translateY(-25px);
+		-webkit-transform: translateY(-25px);
+		-moz-transform: translateY(-25px);
+		-ms-transform: translateY(-25px);
+		-o-transform: translateY(-25px);
+	}
+}

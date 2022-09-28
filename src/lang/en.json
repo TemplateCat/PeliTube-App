@@ -1,0 +1,29 @@
+{
+    "langURL" : "en-US",
+    "header" : {
+        "headerHome" : "Home",
+        "headerAbout" : "About Us",
+        "headerContact" : "Contact Us",
+        "headerSearch" : "Search Movies...",
+        "headerLogin" : "Login",
+        "headerRegister" : "Sign up"
+    },
+    "home" : {
+        "homeH1" : "Movies Online",
+        "homeUpComming" : "Up Comming",
+        "homeDate" : "Date"
+    },
+    "movie" : {
+        "movieVotes" : " votes, average:"
+    },
+    "pagination" : {
+        "paginationPrevious" : "Prev",
+        "paginationNext" : "Next" 
+    },
+    "footer" : {
+        "footerHome" : "Home",
+        "footerAbout" : "About Us",
+        "footerContact" : "Contact Us",
+        "footerCopyright" : "© 2022 PeliTube, All rights reserved."
+    }
+}
